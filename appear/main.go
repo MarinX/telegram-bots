@@ -1,0 +1,34 @@
+package main
+
+import (
+	"log"
+	"os"
+
+	"github.com/yanzay/tbot"
+)
+
+func main() {
+	token := os.Getenv("TELEGRAM_TOKEN")
+	if len(token) <= 0 {
+		log.Println("Telegram token is missing from env")
+		return
+	}
+
+	if err := initServer(token); err != nil {
+		log.Println(err)
+	}
+}
+
+func initServer(token string) error {
+	bot, err := tbot.NewServer(token)
+	if err != nil {
+		return err
+	}
+
+	handler := NewHandler()
+
+	bot.HandleFunc("/appear {name}", handler.CreateRoom)
+	bot.HandleFunc("/appear", handler.CreateRoom)
+
+	return bot.ListenAndServe()
+}
