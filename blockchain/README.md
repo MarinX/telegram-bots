@@ -1,7 +1,6 @@
 # Blockchain Telegram bot
 
-![](blockchain.gif)
-
+<img src="blockchain.gif" width="400">
 
 # Commands
 
