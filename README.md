@@ -11,3 +11,4 @@ need development of a custom bot? [ping me here](https://marin-basic.com/contact
 | --------------- | ------------------------------------- |
 | [Blockchain](https://github.com/MarinX/telegram-bots/tree/master/blockchain) | Simple interface to blockchain info API |
 | [Appear](https://github.com/MarinX/telegram-bots/tree/master/appear) | Create room links with appear.in |
+| [Tiphy](https://github.com/MarinX/telegram-bots/tree/master/tiphy) | Get gifs from giphy |
